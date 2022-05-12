@@ -23,13 +23,17 @@ function getDay(date, lang) {
       6: 'Суббота',
     },
   };
-  return (lang === 'en') ? dayNames.en['${date.getDay()}'] : dayNames.ru['${date.getDay()}']
+  return (lang === `en`) ? dayNames.en[`${date.getDay()}`] : dayNames.ru[`${date.getDay()}`]
 }
 
 // Принимает объект даты, и должно вернуть компоненты даты в виде строки.
 // Вид должен быть такой 12:02(часы и минуты), то есть если у вас одно число на одном из
 // компонентов, то добавляем 0 перед ним
-function formatTime(date) {}
+function formatTime(date) {
+  let hours = date.getHours() > 10 ? date.getHours() : `0${date.getHours()}`;
+  let minutes = date.getMinutes > 10 ? date.getMinutes() : `0${date.getMinutes()}`
+  return `${hours} : ${minutes}`
+}
 
 /*
 Напишите функцию getLastDayOfMonth(year, month), 
