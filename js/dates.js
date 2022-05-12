@@ -44,7 +44,9 @@ year – год из четырёх цифр, например, 2012.
 month – месяц от 0 до 11.
 К примеру, getLastDayOfMonth(2012, 1) = 29 (високосный год, февраль).
 */
-function getLastDayOfMonth(year, month) {}
+function getLastDayOfMonth(year, month) {
+  return new Date(year, ++month, 0).getDate();
+}
 
 module.exports = {
   getDay,
