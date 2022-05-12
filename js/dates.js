@@ -31,8 +31,8 @@ function getDay(date, lang) {
 // компонентов, то добавляем 0 перед ним
 function formatTime(date) {
   let hours = date.getHours() > 10 ? date.getHours() : `0${date.getHours()}`;
-  let minutes = date.getMinutes > 10 ? date.getMinutes() : `0${date.getMinutes()}`
-  return `${hours} : ${minutes}`
+  let minutes = date.getMinutes() > 10 ? date.getMinutes() : `0${date.getMinutes()}`;
+  return `${hours}:${minutes}`;
 }
 
 /*
